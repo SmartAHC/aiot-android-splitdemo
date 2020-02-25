@@ -1,6 +1,22 @@
 # aiot-android-splitdemo
 AIoT 中台服务，Android 模块化工具使用 Demo
 
-# JCenter Provide
+# splitcore
 
-Please provide an online reference showing you're a contributor to this project, such as the project’s Version Control source.
+  ```
+    implementation 'com.smartahc.android:splitcore:1.0.2'
+  ```
+
+  如果，下载不到，请在 root Gradle 中配置
+
+  ```
+     allprojects {
+         repositories {
+             google()
+             jcenter()
+             maven {
+                 url 'https://dl.bintray.com/smartahc/android/'
+             }
+         }
+     }
+  ```
