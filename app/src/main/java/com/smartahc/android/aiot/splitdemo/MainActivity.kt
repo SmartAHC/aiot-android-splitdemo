@@ -33,7 +33,7 @@ class MainActivity : BaseActivity() {
         // 申请权限
         checkPermission()
         // Step 1：注意：请联系商务获取账户密码！！
-        SplitCore.onSplitCreate(this, SmartUser("15626093012", "1234567"))
+        SplitCore.onSplitCreate(this, SmartUser("你的账户", "你的密码"))
         // 测试初始化
         btnInit.setOnClickListener {
             SplitCore.onSplitResume()
