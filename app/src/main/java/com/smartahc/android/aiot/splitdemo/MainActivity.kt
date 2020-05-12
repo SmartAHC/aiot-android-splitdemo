@@ -66,43 +66,10 @@ class MainActivity : BaseActivity() {
         super.onResume()
         // Step 2
         SplitCore.onSplitResume()
-        registryBroadcast()
     }
 
     override fun onDestroy() {
-        unRegistryBroadcast()
         super.onDestroy()
     }
-
-    /**
-     * 注册广播
-     */
-    private fun registryBroadcast() {
-        registerReceiver(broadcast, IntentFilter(Common.SERVICE_BROADCAST_ACTION_FILTER))
-    }
-
-    /**
-     * 解注册
-     */
-    private fun unRegistryBroadcast() {
-        unregisterReceiver(broadcast)
-    }
-
-    /**
-     * 接收
-     */
-    private val broadcast = object : BroadcastReceiver() {
-        override fun onReceive(context: Context?, intent: Intent?) {
-            when (intent?.action) {
-                Common.SERVICE_BROADCAST_ACTION_FILTER -> {
-                    // 获取数据
-                    val earTag = intent.getStringExtra(Common.SERVICE_BROADCAST_KEY_EARTAG)
-                    runOnUiThread {
-                        tvEartag.text = earTag
-                    }
-                }
-            }
-        }
-    }
-
+    
 }
