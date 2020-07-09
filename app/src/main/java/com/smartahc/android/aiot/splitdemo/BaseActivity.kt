@@ -1,19 +1,19 @@
 package com.smartahc.android.simple
 
+import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
+import android.support.v4.app.ActivityCompat
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
 import java.util.concurrent.atomic.AtomicBoolean
 
 
 /**
  * 权限申请
  */
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity : Activity() {
 
     companion object{
         const val REQUEST_PERMISSIONS = 10001

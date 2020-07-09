@@ -20,8 +20,8 @@
         android:usesCleartextTraffic="true">
 
         <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="com.smartahc.android.aiot.splitcore.provider"
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.smartahc.android.aiot.splitdemo.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
