@@ -1,17 +1,11 @@
 package com.smartahc.android.aiot.splitdemo
 
 import android.Manifest
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
-import android.os.Build
 import android.os.Bundle
 import com.smartahc.android.simple.BaseActivity
-import com.smartahc.android.splitcore.Common
-import com.smartahc.android.splitcore.PageParams
-import com.smartahc.android.splitcore.SmartUser
-import com.smartahc.android.splitcore.SplitCore
+import com.smartahc.android.splitcore_support_v4.PageParams
+import com.smartahc.android.splitcore_support_v4.SmartUser
+import com.smartahc.android.splitcore_support_v4.SplitCore
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {

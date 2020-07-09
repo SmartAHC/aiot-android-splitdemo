@@ -19,7 +19,11 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven {
+            url 'https://dl.bintray.com/smartahc/android/'
+        }
     }
+
 }
 
 task clean(type: Delete) {
