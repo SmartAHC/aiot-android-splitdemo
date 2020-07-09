@@ -28,6 +28,7 @@ class MainActivity : BaseActivity() {
         checkPermission()
         // Step 1：注意：请联系商务获取账户密码！！
         SplitCore.onSplitCreate(this, SmartUser("你的账户", "你的密码"))
+        SplitCore.onSetFileProvider("$packageName.provider")
         // 测试初始化
         btnInit.setOnClickListener {
             SplitCore.onSplitResume()
