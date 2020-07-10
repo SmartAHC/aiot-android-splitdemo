@@ -8,7 +8,6 @@ import android.content.IntentFilter
 import android.os.Build
 import android.os.Bundle
 import com.smartahc.android.simple.BaseActivity
-import com.smartahc.android.splitcore.Common
 import com.smartahc.android.splitcore.PageParams
 import com.smartahc.android.splitcore.SmartUser
 import com.smartahc.android.splitcore.SplitCore
