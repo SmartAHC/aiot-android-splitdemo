@@ -1,17 +1,12 @@
 package com.smartahc.android.aiot.splitdemo
 
 import android.Manifest
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
-import android.os.Build
 import android.os.Bundle
 import com.smartahc.android.simple.BaseActivity
-import com.smartahc.android.splitcore.Common
-import com.smartahc.android.splitcore.PageParams
-import com.smartahc.android.splitcore.SmartUser
-import com.smartahc.android.splitcore.SplitCore
+import com.smartahc.android.splitcore_androidx.PageParams
+import com.smartahc.android.splitcore_androidx.SmartUser
+import com.smartahc.android.splitcore_androidx.SplitCore
+
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
@@ -34,6 +29,7 @@ class MainActivity : BaseActivity() {
         checkPermission()
         // Step 1：注意：请联系商务获取账户密码！！
         SplitCore.onSplitCreate(this, SmartUser("你的账户", "你的密码"))
+        SplitCore.onSetFileProvider("com.smartahc.android.aiot.splitdemo.provider")
         // 测试初始化
         btnInit.setOnClickListener {
             SplitCore.onSplitResume()
@@ -54,9 +50,9 @@ class MainActivity : BaseActivity() {
             // 注意：请登录网址端获取配置！！
             SplitCore.onSkipPage(
                 PageParams(
-                    1, 1, 1, listOf(
+                    1,  listOf(
                         "耳标钳", "伸缩阅读器"
-                    )
+                    ),1,"",1, "1"
                 )
             )
         }
